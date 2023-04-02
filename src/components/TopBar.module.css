@@ -1,0 +1,52 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(130, 130, 130) 100%);
+  padding: 10px 20px;
+  position: relative; /* Ajout de cette ligne */
+
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+
+.entreprise {
+  height: 35px;
+  margin-left: 10px;
+}
+
+.searchBarContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.searchBarWrapper {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+
+.searchBar {
+  width: 100%;
+}
+
+.insigne {
+  width: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: ;
+  fill: #000;
+}
+
+.loginButtonContainer {
+  display: flex;
+  align-items: center;
+  /* Ajoutez d'autres styles pour ajuster l'apparence et le positionnement du bouton */
+}

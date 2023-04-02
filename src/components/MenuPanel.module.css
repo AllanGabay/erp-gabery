@@ -1,0 +1,17 @@
+.menuPanel {
+  width: 200px; /* Vous pouvez ajuster cette valeur en fonction de vos préférences */
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.menuItem {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.menuItem:hover {
+  color: #007BFF;
+}

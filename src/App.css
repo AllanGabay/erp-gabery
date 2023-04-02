@@ -1,38 +1,154 @@
 .App {
+  font-family: sans-serif;
+}
+
+.data-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* pour aligner les vignettes en haut */
+}
+
+
+.data-item {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.5s ease;
+  margin: 1rem;
+  transition: transform 0.5s ease;
+  transform-origin: top left;
+  background-color: #ffffff; /* couleur d'arrière-plan blanche */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* ombre légère */
+  border-radius: 10px; /* bordures arrondies */
+  overflow: hidden; /* ajoutez cette ligne */
+
+}
+
+.data-item:hover {
+  transform: scale(2); /* modifiez ce nombre pour ajuster la taille */
+  z-index: 1;
+  flex: 4;
+  padding-bottom: 0.25rem;
+}
+
+
+.data-item:hover .typology {
+margin: 0.7rem;
+}
+
+.additional-data::-webkit-scrollbar {
+  width: 5px; /* Largeur de la barre de défilement */
+}
+
+.additional-data::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Couleur de fond de la piste de la barre de défilement */
+}
+
+.additional-data::-webkit-scrollbar-thumb {
+  background-color: #cacaca; /* Couleur de la barre de défilement elle-même */
+  border-radius: 4px; /* Arrondi des coins de la barre de défilement */
+}
+
+.additional-data::-webkit-scrollbar-thumb:hover {
+  background-color: #ababab; /* Couleur de la barre de défilement lorsqu'elle est survolée */
+}
+
+.additional-data-item {
+margin-top: 0.25rem;
+}
+
+.additional-data {
+  position: relative; /* ajoutez cette ligne */
+  background-color: #ffffff; /* couleur d'arrière-plan complètement blanche */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: none;
+}
+
+.data-item:hover .additional-data{
+  display:inline-block;
+  
+}
+.data-item:hover .client,
+.data-item:hover .typology,
+.data-item:hover .collection,
+.data-item:hover .state,
+.data-item:hover .of-gabery,
+.data-item:hover .collection-value,
+.data-item:hover .collection,
+.data-item:hover .designation-value
+{
+  font-size: 0.6rem;
+}
+.additional-data-item{
+  font-size: 0.4rem;
+}
+.of-gabery{
+  float: right;
+}
+.data-item:hover .of-gabery{
+  margin-top: 0.3rem;
+}
+
+.designation {
+  font-size: 0.8rem;
+}
+.category {
+  color: #333333; /* couleur de texte foncée */
+  font-size: 14px; /* taille de police légèrement plus petite */
+}
+
+.value {
+  color: #333333; /* couleur de texte foncée */
+  font-size: 14px; /* taille de police légèrement plus petite */
+}
+
+.collection {
+  font-style: italic;
+  display: block;
+  text-align: end;
+}
+
+.collection-value {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  color: #222222;
+}
+
+.designation-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.typology{
+  font-weight: bold;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-select {
+  /* width:; Définissez la largeur souhaitée */
+  height: 0.8rem; /* Définissez la hauteur souhaitée */
+  /* Ajoutez d'autres styles si nécessaire */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-select option {
+  min-height: 0.5px !important; /* Définissez la taille de police souhaitée */
+  font-size: 14px; /* Définissez la taille de police souhaitée */
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-dropdown-container {
+  padding: 2px;
 }
